@@ -267,7 +267,6 @@ class ANU230cmForm(BaseRoboticObservationForm):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.target_id = "6"
         self.helper.layout = Layout(
             self.common_layout,
             self.layout(),
