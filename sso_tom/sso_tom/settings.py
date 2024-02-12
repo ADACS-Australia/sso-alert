@@ -59,7 +59,6 @@ INSTALLED_APPS = [
     "tom_catalogs",
     "tom_observations",
     "tom_dataproducts",
-    "tom_registration",
 ]
 
 SITE_ID = 1
@@ -75,7 +74,6 @@ MIDDLEWARE = [
     "tom_common.middleware.Raise403Middleware",
     "tom_common.middleware.ExternalServiceMiddleware",
     "tom_common.middleware.AuthStrategyMiddleware",
-    "tom_registration.middleware.RedirectAuthenticatedUsersFromRegisterMiddleware",
 ]
 
 ROOT_URLCONF = "sso_tom.urls"
@@ -140,11 +138,6 @@ AUTHENTICATION_BACKENDS = (
     "guardian.backends.ObjectPermissionBackend",
 )
 
-TOM_REGISTRATION = {
-    "REGISTRATION_AUTHENTICATION_BACKEND": "django.contrib.auth.backends.ModelBackend",
-    "REGISTRATION_REDIRECT_PATTERN": "home",
-    "SEND_APPROVAL_EMAILS": False,
-}
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.1/topics/i18n/
